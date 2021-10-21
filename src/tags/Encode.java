@@ -21,15 +21,11 @@ public class Encode {
 	}
 
 	public static String sendMessage(String message) {
-		System.out.println("(encode)Dau vao message: " + message);
 		Matcher findMessage = checkMessage.matcher(message);
 		String result = "";
 		while (findMessage.find()) {
 			String subMessage = findMessage.group(0);
-			System.out.println("subMessage: " + subMessage);
 			int begin = subMessage.length();			//do dai chuoi con
-			char nextChar = message.charAt(subMessage.length() - 1); //ky tu cuoi cung cua message
-			System.out.println("nextChar: " + nextChar);
 			result += subMessage; // + nextChar
 			subMessage = message.substring(begin, message.length());
 			message = subMessage;

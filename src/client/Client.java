@@ -60,7 +60,6 @@ public class Client {
 		msg = (String) serverInputStream.readObject();
 		serverInputStream.close();
 		//		just for test
-		System.out.println("toantoan" + msg); //test server return to user
 		clientarray = Decode.getAllUser(msg);
 		new Thread(new Runnable() {
 

@@ -194,7 +194,6 @@ public class ChatGui {
 				if (result == JFileChooser.APPROVE_OPTION) {
 					isSendFile = true;
 					String path_send = (fileChooser.getSelectedFile().getAbsolutePath());
-					System.out.println(path_send);
 					nameFile = fileChooser.getSelectedFile().getName();
 					txtPath.setText(path_send);
 				}
@@ -239,8 +238,6 @@ public class ChatGui {
 		btnSmileIcon.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String msg = "<img src='" + ChatGui.class.getResource("/image/smile.png") + "'></img>";
-				System.out.println("Tin nhan truoc khi bi encode: " + msg);
-				System.out.println("Tin nhan sau khi bi encode: " + Encode.sendMessage(msg));
 				try {
 					chat.sendMessage(Encode.sendMessage(msg));
 				} catch (Exception e1) {
@@ -523,7 +520,7 @@ public class ChatGui {
 						if (msgObj.equals(Tags.CHAT_CLOSE_TAG)) {
 							isStop = true;
 							Tags.show(frameChatGui,
-									nameGuest + " closed chat with you! This windows will also be closed.", false);
+									nameGuest + " đã kết thúc trò chuyện. Chúng tôi sẽ đóng cửa sổ này.", false);
 							try {
 								isStop = true;
 								frameChatGui.dispose();
@@ -636,7 +633,6 @@ public class ChatGui {
 
 			textState.setText("Sending ...");
 			do {
-				System.out.println("sizeOfSend : " + sizeOfSend);
 				if (continueSendFile) {
 					continueSendFile = false;
 					new Thread(new Runnable() {

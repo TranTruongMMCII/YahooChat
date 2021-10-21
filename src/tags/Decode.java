@@ -133,7 +133,6 @@ public class Decode {
 		if (message.matcher(msg).matches()) {
 			int begin = Tags.CHAT_MSG_OPEN_TAG.length();
 			int end = msg.length() - Tags.CHAT_MSG_CLOSE_TAG.length();
-			System.out.println(begin + " "+ end);
 			String message = msg.substring(begin, end);
 			return message;
 		}

@@ -22,9 +22,9 @@ import java.awt.Font;
 import javax.swing.UIManager;
 
 public class Login {
-	private static String NAME_FAILED = "THIS NAME CONTAINS INVALID CHARACTER. PLEASE TRY AGAIN";
-	private static String NAME_EXSIST = "THIS NAME IS ALREADY USED. PLEASE TRY AGAIN";
-	private static String SERVER_NOT_START = "TURN ON SERVER BEFORE START";
+	private static String NAME_FAILED = "Dữ liệu chứa những kí tự không hợp lệ. Hãy thử lại.";
+	private static String NAME_EXSIST = "Tài khoản đã được sử dụng. Hãy thử lại.";
+	private static String SERVER_NOT_START = "Server không tồn tại.";
 
 	private Pattern checkName = Pattern.compile("[_a-zA-Z][_a-zA-Z0-9]*");
 
